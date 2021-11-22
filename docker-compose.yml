@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  minecraft-fabric:
+    image: minecraft-fabric-server:1.0
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+        - ./server:/usr/minecraft/server
+    container_name: minecraft-server
+    ports:
+      - 25565:25565
+      - 24454:24454
